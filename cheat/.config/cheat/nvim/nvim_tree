@@ -1,0 +1,26 @@
+###
+    NEOVIM FILETREE SHORTCUTS
+    by luca
+###
+
+
+# Command	Description
+<leader>e   open the filetree inside neovim
+
+
+# Actions   Description
+    a | create new file
+    d | delete file
+    c | copy file
+    x | cut file
+    p | paste file
+    r | rename file
+    o | open file in new buffer
+    v | vertical split
+    h | horizontal split
+    u | go directory up
+    q | quit filetree
+    l | refresh filetree
+    
+
+

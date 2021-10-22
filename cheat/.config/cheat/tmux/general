@@ -1,0 +1,36 @@
+###
+    TMUX GENERAL SHORTCUTS
+    by luca
+###
+
+# GENERAL
+<Prefix> :      open command line
+<Prefix> ,      rename window 
+
+# SWITCH WINDOW
+<Prefix> n      switch to next window
+<Prefix> p      switch to previous window 
+<Prefix> [x]    switch to window by number
+
+
+# SWITCH PANES
+<Prefix> l      switch to right pane
+<Prefix> h      switch to left pane
+<Prefix> j      switch to bottom pane
+<Prefix> k      switch to top pane
+<Prefix> q [x]  switch to pane by number
+
+# PANE RESIZING
+<Prefix> CTRL l  resize pane to the right
+<Prefix> CTRL h  resize pane to the left
+<Prefix> CTRL j  resize pane to the bottom
+<Prefix> CTRL k  resize pane to the top
+<Prefix> z       resize pane to fullscreen
+
+# CREATE
+<Prefix> w  create new window
+<Prefix> t  create vertical split 
+<Prefix> -  create horizontal split
+
+# DELETE
+<Prefix> x  delete window or pane 
