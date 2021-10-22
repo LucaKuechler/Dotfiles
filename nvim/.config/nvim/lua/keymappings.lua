@@ -31,5 +31,7 @@ vim.api.nvim_set_keymap('n', '<C-j>', ':resize -5<CR>', { noremap = true, silent
 vim.api.nvim_set_keymap('n', '<C-h>', ':vertical:resize +5<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', ':vertical:resize -5<CR>', { noremap = true, silent = true })
 
--- nerd commenter
-vim.api.nvim_set_keymap('n', '<C-\\>', ':call nerdcommenter#Comment("x", "toggle")<CR>', { noremap = true, silent = true })
+-- better indention
+vim.api.nvim_set_keymap('v', '<C-i>', '>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-u>', '<gv', { noremap = true, silent = true })
+
