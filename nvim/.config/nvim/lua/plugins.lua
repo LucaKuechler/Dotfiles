@@ -45,13 +45,8 @@ return require('packer').startup(function()
   -- auto completion
   use 'hrsh7th/nvim-compe'
   use 'kiteco/vim-plugin'
-  --use 'davidhalter/jedi-vim'
 
   -- toogle code commments
   use "terrortylor/nvim-comment"
 
-  -- which key
-  use "folke/which-key.nvim"
-
-  
 end)
