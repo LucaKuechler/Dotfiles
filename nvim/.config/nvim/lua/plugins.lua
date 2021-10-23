@@ -36,9 +36,6 @@ return require('packer').startup(function()
   -- buffer line
   use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
-  -- welcome page
-  use 'glepnir/dashboard-nvim'
-
   -- telescope
   use {
     'nvim-telescope/telescope.nvim',
@@ -52,9 +49,6 @@ return require('packer').startup(function()
 
   -- toogle code commments
   use "terrortylor/nvim-comment"
-
-  -- python development
-  use 'python-mode/python-mode'
 
   -- which key
   use "folke/which-key.nvim"
