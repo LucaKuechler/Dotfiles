@@ -56,6 +56,8 @@ return require('packer').startup(function()
   -- python development
   use 'python-mode/python-mode'
 
+  -- which key
+  use "folke/which-key.nvim"
 
   
 end)
