@@ -30,14 +30,8 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
-  -- color themes
-  use 'tomasr/molokai'
-
   -- buffer line
   use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
-
-  -- welcome page
-  use 'glepnir/dashboard-nvim'
 
   -- telescope
   use {
@@ -48,14 +42,18 @@ return require('packer').startup(function()
   -- auto completion
   use 'hrsh7th/nvim-compe'
   use 'kiteco/vim-plugin'
-  --use 'davidhalter/jedi-vim'
 
   -- toogle code commments
   use "terrortylor/nvim-comment"
 
-  -- python development
-  use 'python-mode/python-mode'
+  -- better syntax highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+     run = ':TSUpdate'
+  }
+
+  -- color theme
+  use 'christianchiarulli/nvcode-color-schemes.vim'
 
 
-  
 end)

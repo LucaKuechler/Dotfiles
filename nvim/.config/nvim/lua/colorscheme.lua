@@ -1,3 +1,7 @@
-vim.cmd('colorscheme molokai')
+vim.cmd('colorscheme onedark')
 vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 vim.cmd('highlight LineNr guibg=NONE')
+vim.cmd('highlight CursorLine term=bold cterm=bold guibg=none')
+vim.cmd('highlight CursorLineNr gui=bold guifg=Yellow guibg=NONE')
+vim.cmd('highlight clear SignColumn')
+vim.cmd('highlight Cursor ctermfg=black ctermbg=black')

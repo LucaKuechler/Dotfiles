@@ -35,3 +35,5 @@ vim.api.nvim_set_keymap('n', '<C-l>', ':vertical:resize -5<CR>', { noremap = tru
 vim.api.nvim_set_keymap('v', '<C-i>', '>gv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-u>', '<gv', { noremap = true, silent = true })
 
+-- which key
+vim.api.nvim_set_keymap('n', '<Leader>w', ':WhichKey<CR>', { noremap = true, silent = true })
