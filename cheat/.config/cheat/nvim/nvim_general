@@ -1,0 +1,37 @@
+###
+    NVIM GENERAL SHORTCUTS
+    by luca
+###
+
+# GENERAL
+<Leader> h      remove highligting after search
+<Leader> e      toggle filetree
+
+# WINDOW NAVIGATION
+gl      go to right window
+gh      go to left window
+gj      go to bottom window
+gk      got to top window
+
+# WINDOW RESIZING
+CTRL l  resize to the right
+CTRL h  resize to the left
+CTRL j  resize to the bottom
+CTRL k  resize to the top
+
+# INDENTION
+CTRL-i      indent highlighted lines
+CTRL-u      outdent highlighted lines
+
+# BUFFERLINE
+<TAB>       go to next buffer from bufferline
+<S-TAB>     go to previous buffer from bufferline
+gt [x]      go to buffer by random letter
+gtd [x]     go to buffer and delete it by random letter
+CTRL-w      close the focused buffer
+
+# COMMENTARY
+<Leader>cl      highlight line in normal mode
+<Leader>c       highlight line in visual mode
+<Leader>cpi     highlight paragraph in normal mode
+gv              highlight last thing again
