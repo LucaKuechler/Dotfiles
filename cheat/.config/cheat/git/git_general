@@ -1,0 +1,10 @@
+###
+    GIT GENERAL SHORTCUTS
+    by luca
+###
+
+# LOCAL BRANCH IS BEHIND MASTER 
+git checkout <your-branch>
+git fetch origin     
+git merge origin/master
+
