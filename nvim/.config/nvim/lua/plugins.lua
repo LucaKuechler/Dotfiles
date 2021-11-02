@@ -52,6 +52,10 @@ return require('packer').startup(function()
      run = ':TSUpdate'
   }
 
+  -- auto completion
+  use "hrsh7th/nvim-cmp"
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+
   -- color theme
   use 'christianchiarulli/nvcode-color-schemes.vim'
 end)
