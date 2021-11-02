@@ -54,6 +54,4 @@ return require('packer').startup(function()
 
   -- color theme
   use 'christianchiarulli/nvcode-color-schemes.vim'
-
-
 end)
