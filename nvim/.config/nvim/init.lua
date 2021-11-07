@@ -11,3 +11,9 @@ require('config.tabnine')
 require('config.nvimtree')
 require('config.commentary')
 require('config.treesitter')
+
+-- LSP Config
+require('lsp.lsp-config')
+
+-- EFM Config
+require('efm.efm-config')

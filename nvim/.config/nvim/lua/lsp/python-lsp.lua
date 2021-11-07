@@ -1,0 +1,13 @@
+require'lspconfig'.pyright.setup
+{
+    settings = {
+      python = {
+        analysis = {
+          autoSearchPaths = true,
+          diagnosticMode = "workspace",
+          useLibraryCodeForTypes = true,
+          typeCheckingMode = "strict"
+        }
+      }
+    }
+}
