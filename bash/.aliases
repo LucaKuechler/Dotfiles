@@ -1,0 +1,81 @@
+# ---------------- GENERAL ---------------------------
+alias c='clear'
+alias cls='clear'
+alias h='history'
+alias hs='history | grep'
+alias hg='history | grep'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias cd..="cd .."
+
+
+# ---------------- PROGRAMS --------------------------
+# LSD
+if command -v lsd &> /dev/null
+then
+	alias ll='lsd -AlF'
+	alias la='lsd -A'
+	alias l='lsd -al'
+	alias ls='lsd'
+fi
+
+# DOCKER
+if command -v docker &> /dev/null
+then
+    alias dst='docker start'
+    alias dsp='docker stop' 
+    alias dr='docker restart'
+    alias dl='docker logs --follow'
+    alias di='docker inspect'
+
+    if command -v fzf &> /dev/null
+    then
+        alias dsts='docker start $(docker ps -a --format "'{{.Names}}'" | fzf)'
+        alias dsps='docker stop $(docker ps -a --format "'{{.Names}}'" | fzf)' 
+        alias drs='docker restart $(docker ps -a --format "'{{.Names}}'" | fzf)'
+        alias dls='docker logs $(docker ps -a --format "'{{.Names}}'" | fzf) --follow'
+        alias dis='docker inspect $(docker ps -a --format "'{{.Names}}'" | fzf)'
+        alias deb='docker exec -it $(docker ps -a --format "'{{.Names}}'" | fzf) /bin/bash'
+        alias des='docker exec -it $(docker ps -a --format "'{{.Names}}'" | fzf) /bin/sh'
+    fi
+fi
+
+# DOCKER-COMPOSE
+if command -v docker-compose &> /dev/null
+then
+    alias dcud='docker-compose up -d'
+    alias dcudb='docker-compose up -d --build'
+    alias dcd='docker-compose down'
+fi
+
+# GIT
+if command -v git &> /dev/null
+then
+    alias g='git'
+    alias gs='git status'
+    alias ga='git add'
+    alias gaa='git add *'
+    alias gc='git commit -m'
+    alias gps='git push'
+    alias gpl='git pull'
+fi
+
+# NVIM
+if command -v git &> /dev/null
+then
+    alias v='nvim'
+    alias nivm='nvim'
+fi
+
+# APT
+alias ai='sudo apt install'
+alais ar='sudo apt remove'
+alias ay='sudo apt install -y'
+alias auu='sudo apt upgrade && sudo apt update'
+
+
+# ---------------- CUSTOM ----------------------------
+alias ccd='cd $(find * -type d | fzf)'
+alias vf='nvim $(find * -type f | fzf)'
+alias cs='less -c $(find ~/.config/cheat/**/* -type f | fzf)'
