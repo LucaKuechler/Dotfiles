@@ -99,13 +99,29 @@ nvim
 
 * Install go.
 ```
-    wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
+    curl -OL https://golang.org/dl/go1.16.7.linux-amd64.tar.gz ~/Downloads
+```
+
+* Unpack the installed file.
+```
+    sudo tar -C /usr/local -xvf ~/Downloads/go1.16.7.linux-amd64.tar.gz
 ```
 
 * Add go to your ~/.profile file.
 ```
     echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile && source ~/.profile
 ```
+
+* Install langserver via NVIM.
+```
+    :LspInstall efm
+```
+
+* Add EFM to your path.
+```
+    echo 'export PATH=$PATH:~/.local/share/nvim/lsp_servers/efm/' >> ~/.profile && source ~/.profile
+```
+
 
 ### 3.4 INSTALL EFM LANGUAGE SERVER COMPONENTS
 
@@ -133,4 +149,19 @@ nvim
 ```
 
 #### Arch
+
+
+### 3.5 INSTALL PYRIGHT
+* Install Nodejs 12.x
+```
+    sudo apt update
+    sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+    sudo apt -y install nodejs
+```
+
+* Install pyright with lsp install.
+```
+    npm i -g pyright    
+```
 
