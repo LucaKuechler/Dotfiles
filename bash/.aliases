@@ -70,7 +70,7 @@ fi
 
 # APT
 alias ai='sudo apt install'
-alais ar='sudo apt remove'
+alias ar='sudo apt remove'
 alias ay='sudo apt install -y'
 alias auu='sudo apt upgrade && sudo apt update'
 
