@@ -1,0 +1,5 @@
+# HIGHLIGHT VI MODE IN PROMPT
+set show-mode-in-prompt on
+set vi-cmd-mode-string "\1\e[2 q\2[N] "
+set vi-ins-mode-string "\1\e[2 q\2"
+
