@@ -1,0 +1,13 @@
+###
+    BASH UBUNTU ALIASES 
+    by luca
+###
+
+# APT
+ai      'sudo apt install'
+aiy     'sudo apt install -y'
+aud     'sudo apt update'
+aug     'sudo apt upgrade'
+ar      'sudo apt remove'
+auu     'sudo apt upgrade && sudo apt update'
+
