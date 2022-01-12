@@ -1,0 +1,48 @@
+###
+    BASH GENERAL ALIASES 
+    by luca
+###
+
+# GENERAL
+c       'clear'
+cls     'clear'
+
+
+# LSD 
+ll      'lsd -AlF'
+la      'lsd -A'
+l       'lsd -al'
+ls      'lsd'
+
+
+# TMUX
+t       'tmux attach || tmux new-session'
+ta      'tmux attach -t'
+tl      'tmux list-sessions'
+
+
+# NVIM
+v	'open nvim'
+nivm	'open nvim if typed wrong'
+vf      'find file in fzf and open in nvim'
+
+
+# CHANGE DIRECTORY
+..      'cd ..'
+...     'cd ../..'
+....    'cd ../../../'
+cd..    'cd ..'
+cd...   'cd ../..'
+cd....  'cd ../../../'
+ccd     'change directory with fzf'
+
+
+# HISTORY
+h       'history'
+hg      'history | grep'
+hs      'select command from history and copy to clipboard'
+
+
+# CUSTOM
+fif     'find in all files to a given path a specific word'
+cs      'find in cheatsheet folder a specific cheat sheet'

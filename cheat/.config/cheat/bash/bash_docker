@@ -1,0 +1,44 @@
+###
+    BASH DOCKER ALIASES 
+    by luca
+###
+
+# DOCKER CONTAINER MANAGEMENT
+dt      'docker start'
+dp      'docker stop' 
+dr      'docker restart'
+dl      'docker logs'
+dlf     'docker logs --follow'
+di      'docker inspect'
+de      'docker exec -it'
+dps     'docker ps'
+
+# DOCKER CONTAINER MANAGEMENT FZF
+dts     'docker start with fzf list containing available containers'
+dps     'docker stop with fzf list containing available containers'
+drs     'docker restart with fzf list containing available containers'
+dls     'docker logs with fzf list containing available containers'
+dlfs    'docker logs with fzf list containing available containers'
+dis     'docker inspect with fzf list containing available containers'
+dess    'docker exec in shell with fzf list containing available containers'
+debs    'docker exec in bash with fzf list containing available containers'
+
+# DOCKER CONTAINER CREATION
+dpl    'docker pull'
+dpu    'docker push'
+db     'docker build'
+
+# DOCKER-COMPOSE
+dcud    'docker-compose up -d'
+dcudb   'docker-compose up -d --build'
+dcd     'docker-compose down'
+
+
+
+
+
+
+
+
+
+

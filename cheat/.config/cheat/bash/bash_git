@@ -1,0 +1,30 @@
+###
+    BASH GIT ALIASES 
+    by luca
+###
+
+# GENERAL 
+g       'git'
+gi      'git init'
+gc      'git clone'
+
+
+# WORK
+gs      'git status'
+ga      'git add'
+gaa     'git add *'
+gcm     'git commit -m'
+gps     'git push'
+gpl     'git pull'
+
+
+# FILE MANAGEMENT
+grm     'git rm'
+grs     'git restore'
+gf      'git fetch'
+
+
+# BRANCHES
+gco     'git checkout'
+gcom    'git checkout master'
+gccb    'git checkout -b'
