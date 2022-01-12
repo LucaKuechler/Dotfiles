@@ -29,6 +29,13 @@ then
     eval "$(starship init bash)"
 fi
 
+# FZF SETTING
+if command -v fzf &> /dev/null && type rg &> /dev/null
+then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden'
+fi
+
+
 # BETTER CD
 eval "$(zoxide init bash)"
 
@@ -36,6 +43,14 @@ eval "$(zoxide init bash)"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+
+# --------------------------------------------------------------------
+# VI MODE
+# --------------------------------------------------------------------
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
 
 
 # --------------------------------------------------------------------
