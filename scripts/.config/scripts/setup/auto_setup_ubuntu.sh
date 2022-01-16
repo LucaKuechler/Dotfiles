@@ -1,3 +1,10 @@
+# install gnu stow 
+if ! command -v unzip &> /dev/null
+then
+    echo "Gnu Stow is not installed so it will be automatically installed." 
+    sudo apt install stow -y
+fi
+
 # install unzip
 if ! command -v unzip &> /dev/null
 then
