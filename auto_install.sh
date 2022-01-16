@@ -14,6 +14,7 @@ softwares=(
     "ranger"
     "starship"
     "tmux"
+    "zoxide"
     #"testcase"
 )
 
