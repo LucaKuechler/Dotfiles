@@ -1,0 +1,77 @@
+###
+    VIM SHORTCUTS FOR FIREFOX
+    by luca
+###
+
+# GENERAL
+h	    left
+j	    down
+k	    up
+l	    right
+
+
+# TAB CONTROL
+J	move to left tab
+K	move to right tab
+d	delete current tab and select right tab
+D	delete current tab and select left tab
+u	restore closed tab
+r	reload current tab
+R	reload current tab and clear cache
+
+
+# HISTORY CONTROL (NOT BROWSER HISTORY)
+H       go one page back
+L       go one page forward
+
+
+# LINKS
+f       open a link in current tab by char
+F       open a link in new tab by char
+
+
+# CONSOLE OPEN / SWITCH
+:       open console
+
+o       open a website in current tab
+t       open a website in new tab
+w       open a website in new window
+
+O       open current website in current tab
+T       open current website in new tab
+W       open current website in new window
+
+b       switch tab by name or index
+a       add current tab to bookmarks
+
+
+# PINNED TABS
+zp	    pin tab
+!d	    remove pinned tab
+
+
+# ADVANCED SCROLLING
+gg		scroll to start of page
+G		scroll to end of page
+
+<ctrl> u	scroll up half page
+<ctrl> d	scroll down half page
+<ctrl> b	scroll up page
+<ctrl> f	scroll down page
+
+
+# MARKS
+m [a-z]		set a mark for the current position
+' [a-z]		jump to a marked position
+
+
+# ZOOM
+zi	zoom in
+zo	zoom out
+zz	reset zoom
+
+
+# ADVANCED
+gf      view html code
+y       copy current url in clipboard
+/       search
