@@ -23,11 +23,17 @@ return require('packer').startup(function()
       config = function() require'nvim-tree'.setup {} end
   }
 
-  -- status line
-  use {
-    'glepnir/galaxyline.nvim',
-    branch = 'main',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  use{
+    "NTBBloodbath/galaxyline.nvim",
+
+	-- your statusline
+    config = function()
+        require("galaxyline.themes.eviline")
+    end,
+
+    -- some optional icons
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
+
   }
 
   -- buffer line
