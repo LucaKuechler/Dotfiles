@@ -12,6 +12,7 @@ require("config.nvimtree")
 require("config.commentary")
 require("config.treesitter")
 require("config.indent")
+require("config.autopair")
 
 -- LSP Config
 require("lsp.lsp-config")

@@ -93,4 +93,7 @@ return require("packer").startup(function()
 
 	-- indentation
 	use "lukas-reineke/indent-blankline.nvim"
+
+	-- auto pairs ( -> ()
+	use "steelsojka/pears.nvim"
 end)
