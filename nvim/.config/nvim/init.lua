@@ -11,6 +11,7 @@ require("config.tabnine")
 require("config.nvimtree")
 require("config.commentary")
 require("config.treesitter")
+require("config.indent")
 
 -- LSP Config
 require("lsp.lsp-config")
