@@ -74,7 +74,7 @@ $ mv ~/.config/nvim/ ~/.config/nvim-backup
 $ cd ~/Dotfiles/ && stow nvim
 ```
 
-### 3.1 INSTALL PLUGGINS
+### 3.1 INSTALL PLUGINS
 * Install all neovim plugins using packer.
 
 * Open NVIM.
@@ -82,7 +82,7 @@ $ cd ~/Dotfiles/ && stow nvim
 $ nvim
 ```
 
-* Install the pluggins.
+* Install the plugins.
 ```
     :PackerInstall
 ```
