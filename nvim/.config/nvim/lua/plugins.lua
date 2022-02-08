@@ -76,4 +76,10 @@ return require("packer").startup(function()
 
 	-- formatter
 	use("mhartington/formatter.nvim")
+
+	-- diagnostic popup
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+	})
 end)
