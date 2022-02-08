@@ -99,6 +99,7 @@ gls.right[3] = {
 gls.right[4] = {
 	GitBranch = {
 		provider = "GitBranch",
+		separator = " ",
 		condition = condition.check_git_workspace,
 		highlight = { colors.violet, colors.bg, "bold" },
 	},
@@ -109,6 +110,7 @@ gls.right[5] = {
 		provider = "DiffAdd",
 		condition = condition.hide_in_width,
 		icon = "  ",
+		separator = " ",
 		highlight = { colors.green, colors.bg },
 	},
 }

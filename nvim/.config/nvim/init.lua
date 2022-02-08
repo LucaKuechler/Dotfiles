@@ -21,3 +21,6 @@ require("linter.test")
 
 -- Format
 require("formatter.test")
+
+-- Git
+require("git.gitsigns")

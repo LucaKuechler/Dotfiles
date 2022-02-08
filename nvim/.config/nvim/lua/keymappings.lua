@@ -47,3 +47,10 @@ vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>Trouble document_diagnostics<cr>
 vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
+
+-- git
+vim.api.nvim_set_keymap("n", "<leader>h", ":Gitsigns toggle_signs<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>hd", ":Gitsigns diffthis<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>hp", ":Gitsigns preview_hunk<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>hj", ":Gitsigns next_hunk<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>hk", ":Gitsigns prev_hunk<CR>", { silent = true, noremap = true })
