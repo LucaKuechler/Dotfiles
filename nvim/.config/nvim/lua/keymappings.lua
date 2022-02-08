@@ -3,7 +3,7 @@ vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", { noremap = true, silent = true
 vim.g.mapleader = " "
 
 -- remove search highlighting
-vim.api.nvim_set_keymap("n", "<Leader>h", ":set hlsearch!<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>v", ":set hlsearch!<CR>", { noremap = true, silent = true })
 
 -- nvim lua file tree
 vim.api.nvim_set_keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
