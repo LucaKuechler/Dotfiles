@@ -83,11 +83,14 @@ return require("packer").startup(function()
 		requires = "kyazdani42/nvim-web-devicons",
 	})
 
-    -- git
+	-- git
 	use({
 		"lewis6991/gitsigns.nvim",
 		requires = {
 			"nvim-lua/plenary.nvim",
 		},
 	})
+
+	-- indentation
+	use "lukas-reineke/indent-blankline.nvim"
 end)
