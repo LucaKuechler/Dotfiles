@@ -46,9 +46,6 @@ return require("packer").startup(function()
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	-- auto completion
-	use("hrsh7th/nvim-compe")
-
 	-- toogle code commments
 	use("terrortylor/nvim-comment")
 
