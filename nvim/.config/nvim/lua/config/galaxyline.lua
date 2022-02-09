@@ -1,4 +1,6 @@
 local gl = require("galaxyline")
+local util = require("lspconfig/util")
+local path = util.path
 local colors = require("galaxyline.themes.colors").default
 local condition = require("galaxyline.condition")
 local gls = gl.section
@@ -50,6 +52,18 @@ gls.left[5] = {
 		provider = "FileIcon",
 		condition = condition.buffer_not_empty,
 		highlight = { require("galaxyline.providers.fileinfo").get_file_icon_color, colors.bg },
+	},
+}
+
+gls.left[6] = {
+	PythonEnv = {
+		provider = function()
+			if vim.env.VIRTUAL_ENV then
+				local envName = vim.env.VIRTUAL_ENV:sub(vim.env.VIRTUAL_ENV:find("/[^/]*$") + 1)
+				return "(" .. envName .. ") "
+			end
+			return ""
+		end,
 	},
 }
 
