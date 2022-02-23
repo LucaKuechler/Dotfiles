@@ -65,7 +65,8 @@ return require("packer").startup(function()
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
-    use('hrsh7th/cmp-path')
+	use("hrsh7th/cmp-path")
+	use("onsails/lspkind-nvim")
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
 	-- color theme
