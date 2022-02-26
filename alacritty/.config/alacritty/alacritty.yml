@@ -5,7 +5,7 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  opacity: 0.7
+  opacity: 0.8
 
 scrolling:
   history: 10000
@@ -14,18 +14,9 @@ scrolling:
 
 font:
   normal:
-    family: JetBrains Mono Nerd Font
-    style:  Medium
-  bold:
-    family: JetBrains Mono Nerd Font
-    style:  Bold
-  italic:
-    family: JetBrains Mono Nerd Font
-    style:  MediumItalic
-  bold_italic:
-    family: JetBrains Mono Nerd Font
-    style: BoldItalic
-  size: 7
+    family: Hack Nerd Font Mono
+    style:  Regular
+  size: 16
 draw_bold_text_with_bright_colors: true
 
 colors:
@@ -52,10 +43,7 @@ colors:
     white: "#acb0d0"
 
 selection:
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 shell:
-  program: /usr/bin/zsh
-
-key_bindings:
-  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
+  program: /usr/bin/bash
