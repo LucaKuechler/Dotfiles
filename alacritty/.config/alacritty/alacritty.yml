@@ -21,7 +21,7 @@ draw_bold_text_with_bright_colors: true
 
 colors:
   primary:
-    background: "#11121D"
+    background: "#111111"
     foreground: "#a9b1d6"
   normal:
     black: "#32344a"
