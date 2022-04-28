@@ -63,6 +63,10 @@ return require("packer").startup(function()
 
 	-- auto completion
 	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("onsails/lspkind-nvim")
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
 	-- color theme
@@ -89,7 +93,7 @@ return require("packer").startup(function()
 	})
 
 	-- indentation
-	use "lukas-reineke/indent-blankline.nvim"
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- auto pairs ( -> ()
 	use "steelsojka/pears.nvim"
