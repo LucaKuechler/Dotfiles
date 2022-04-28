@@ -96,5 +96,10 @@ return require("packer").startup(function()
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- auto pairs ( -> ()
-	use("steelsojka/pears.nvim")
+	use "steelsojka/pears.nvim"
+
+    -- debuger
+    use 'mfussenegger/nvim-dap'
+    use 'mfussenegger/nvim-dap-python'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 end)

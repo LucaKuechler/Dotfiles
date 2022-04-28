@@ -91,7 +91,7 @@ $ nvim
 ### 3.2 INSTALL LANGUAGE SERVERS
 
 #### 3.2.1 pyright
-* Install Nodejs 12.x
+* Install Nodejs (12.x).
 ```
 $ sudo apt update
 $ sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates

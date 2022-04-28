@@ -1,0 +1,49 @@
+window:
+  padding:
+    x: 5
+    y: 5
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 0.8
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+
+font:
+  normal:
+    family: Hack Nerd Font Mono
+    style:  Regular
+  size: 16
+draw_bold_text_with_bright_colors: true
+
+colors:
+  primary:
+    background: "#111111"
+    foreground: "#E5E5E5"
+  normal:
+    black: "#212121"
+    red: "#B7141F"
+    green: "#457B24"
+    yellow: "#F6981E"
+    blue: "#134EB2"
+    magenta: "#560088"
+    cyan: "#0E717C"
+    white: "#EFEFEF"
+  bright:
+    black: "#424242"
+    red: "#E83B3F"
+    green: "#7ABA3A"
+    yellow: "#FFEA2E"
+    blue: "#54A4F3"
+    magenta: "#AA4DBC"
+    cyan: "#26BBD1"
+    white: "#D9D9D9"
+
+selection:
+  save_to_clipboard: true
+
+shell:
+  program: /usr/bin/bash
