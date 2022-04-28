@@ -54,3 +54,7 @@ vim.api.nvim_set_keymap("n", "<leader>hd", ":Gitsigns diffthis<CR>", { silent = 
 vim.api.nvim_set_keymap("n", "<leader>hp", ":Gitsigns preview_hunk<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>hj", ":Gitsigns next_hunk<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>hk", ":Gitsigns prev_hunk<CR>", { silent = true, noremap = true })
+
+-- debugger
+vim.api.nvim_set_keymap("n", "<leader>d", ":lua require'dap'.continue()<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>db", ":lua require('dap').toggle_breakpoint()<CR>", { silent = true, noremap = true })

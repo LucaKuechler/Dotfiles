@@ -206,3 +206,9 @@ then
 else
     alias cs='echo "ALIAS ERROR: Please install FZF first!"'
 fi
+
+if command -v nvim &> /dev/null
+then
+    alias nvconf="~/Dotfiles/scripts/.config/scripts/nvconf.sh"
+fi
+

@@ -26,3 +26,8 @@ require("formatter.test")
 
 -- Git
 require("git.gitsigns")
+
+-- Debugger
+require("debugger.debugger")
+require("debugger.ui")
+require("debugger.python")
