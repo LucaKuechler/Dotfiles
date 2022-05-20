@@ -65,4 +65,8 @@ require("cmp").setup({
 			compare.order,
 		},
 	},
+
+	view = {
+		entries = "native",
+	}
 })
