@@ -2,7 +2,7 @@ local dap = require("dap")
 dap.adapters.go = {
 	type = "executable",
 	command = "node",
-	args = { os.getenv("HOME") .. "/Downloads/vscode-go/dist/debugAdapter.js" },
+	args = { os.getenv("HOME") .. "/.local/share/nvim/debugger/go/vscode-go/dist/debugAdapter.js" },
 }
 dap.configurations.go = {
 	{
@@ -11,6 +11,6 @@ dap.configurations.go = {
 		request = "launch",
 		showLog = false,
 		program = "${file}",
-		dlvToolPath = vim.fn.exepath("dlv"),  -- Adjust to where delve is installed
+		dlvToolPath = os.getenv("HOME") .. "/.local/share/nvim/debugger/go/delve/dlv",  -- Adjust to where delve is installed
 	},
 }

@@ -141,6 +141,7 @@ $ cd delve
 $ go install github.com/go-delve/delve/cmd/dlv
 $ make build
 $ chmod +x dlv
+$ mkdir -p ~/.local/share/nvim/debugger/go/delve
 $ mv dlv ~/.local/share/nvim/debugger/go/delve
 ```
 
@@ -151,4 +152,5 @@ $ git clone https://github.com/golang/vscode-go
 $ cd vscode-go
 $ npm install
 $ npm run compile
+$ chmod +x dist/debugAdapter.js
 ```
