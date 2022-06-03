@@ -34,6 +34,7 @@ vim.api.nvim_set_keymap("n", "<C-l>", ":vertical:resize -5<CR>", { noremap = tru
 
 -- better indention
 vim.api.nvim_set_keymap("v", "<C-i>", ">gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-a>", ">gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<C-u>", "<gv", { noremap = true, silent = true })
 
 -- formatter

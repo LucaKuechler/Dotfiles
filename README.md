@@ -131,3 +131,26 @@ $ cargo install stylua
 ```
 $ echo 'export PATH=$PATH:~/.cargo/bin' >> ~/.profile && source ~/.profile
 ```
+
+### 3.4 INSTALL DEBUGGER
+#### 3.4.1 Go
+* Install go debugger.
+```
+$ git clone https://github.com/go-delve/delve
+$ cd delve
+$ go install github.com/go-delve/delve/cmd/dlv
+$ make build
+$ chmod +x dlv
+$ mkdir -p ~/.local/share/nvim/debugger/go/delve
+$ mv dlv ~/.local/share/nvim/debugger/go/delve
+```
+
+* Install debugger adapter.
+```
+$ cd ~/.local/share/nvim/debugger/go/
+$ git clone https://github.com/golang/vscode-go
+$ cd vscode-go
+$ npm install
+$ npm run compile
+$ chmod +x dist/debugAdapter.js
+```
