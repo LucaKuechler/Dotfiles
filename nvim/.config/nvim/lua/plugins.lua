@@ -103,4 +103,7 @@ return require("packer").startup(function()
 	use("mfussenegger/nvim-dap-python")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use("leoluz/nvim-dap-go")
+
+	-- lsp function signature
+	use({"hrsh7th/cmp-nvim-lsp-signature-help", requires = "hrsh7th/nvim-cmp"})
 end)

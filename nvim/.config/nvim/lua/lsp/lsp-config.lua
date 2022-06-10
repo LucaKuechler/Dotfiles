@@ -9,3 +9,13 @@ for _, lsp in ipairs(servers) do
 		},
 	})
 end
+
+require'cmp'.setup {
+  sources = {
+    { name = 'nvim_lsp_signature_help' }
+  }
+}
+
+require("nvim-lsp-installer").setup({
+	ensure_installed = {"gopls", "dockerls", "pyright"},
+})
