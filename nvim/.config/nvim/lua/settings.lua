@@ -23,7 +23,7 @@ o.mouse = "a" -- mouse support
 
 o.fileencoding = "utf-8" -- fileencoding
 
-o.updatetime = 300 -- Faster completion
+o.updatetime = 750 -- Faster completion
 
 o.clipboard = "unnamedplus" -- clipboard
 
