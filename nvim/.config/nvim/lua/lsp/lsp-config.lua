@@ -15,3 +15,7 @@ require'cmp'.setup {
     { name = 'nvim_lsp_signature_help' }
   }
 }
+
+require("nvim-lsp-installer").setup({
+	ensure_installed = {"gopls", "dockerls", "pyright"},
+})
