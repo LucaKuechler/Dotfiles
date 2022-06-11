@@ -96,7 +96,7 @@ return require("packer").startup(function()
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- auto pairs ( -> ()
-	use("steelsojka/pears.nvim")
+	use ("windwp/nvim-autopairs")
 
 	-- debuger
 	use("mfussenegger/nvim-dap")
