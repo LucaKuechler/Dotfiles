@@ -16,7 +16,10 @@ require("config.autopair")
 
 -- LSP Config
 require("lsp.lsp-config")
-require("lsp.python-lsp")
+require("lsp.lsp-python")
+require("lsp.lsp-go")
+require("lsp.lsp-docker")
+require("lsp.lsp-lua")
 
 -- Linter
 require("linter.test")
