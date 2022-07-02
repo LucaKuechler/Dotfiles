@@ -40,8 +40,8 @@ vim.api.nvim_set_keymap("v", "<C-u>", "<gv", { noremap = true, silent = true })
 -- formatter
 vim.api.nvim_set_keymap("n", "<leader>f", ":Format<CR>", { noremap = true, silent = true })
 
--- linter
-vim.api.nvim_set_keymap("n", "<Leader>l", ':lua require("lint").try_lint()<CR>', { noremap = true, silent = true })
+-- linter (additional programs)
+vim.api.nvim_set_keymap("n", "<leader>p", ':lua require("lint").try_lint()<CR>', { noremap = true, silent = true })
 
 -- trouble
 vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>Trouble document_diagnostics<cr>", { silent = true, noremap = true })
