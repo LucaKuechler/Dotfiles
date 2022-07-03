@@ -96,7 +96,7 @@ return require("packer").startup(function()
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- auto pairs ( -> ()
-	use ("windwp/nvim-autopairs")
+	use("windwp/nvim-autopairs")
 
 	-- debuger
 	use("mfussenegger/nvim-dap")
@@ -105,5 +105,8 @@ return require("packer").startup(function()
 	use("leoluz/nvim-dap-go")
 
 	-- lsp function signature
-	use({"hrsh7th/cmp-nvim-lsp-signature-help", requires = "hrsh7th/nvim-cmp"})
+	use({ "hrsh7th/cmp-nvim-lsp-signature-help", requires = "hrsh7th/nvim-cmp" })
+
+	-- jump to code symbols
+	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 end)

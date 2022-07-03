@@ -35,3 +35,25 @@ CTRL-w      close the focused buffer
 <Leader>c       highlight line in visual mode
 <Leader>cpi     highlight paragraph in normal mode
 gv              highlight last thing again
+
+# CODE NAVIGATION
+CTRL-p      go back to previous movement
+CTRL-n      go back to next movement
+gi          jump to last insertion line
+[[          go to start of class          
+]]          go to end of class
+[m          go to start of function
+]m          go to end of function
+
+# PAGE NAVIGATION
+CTRL-b      move page backward
+CTRL-f      move page forward
+CTRL-d      move 1/2 page forward
+CTRL-s      move 1/2 page backward
+CTRL-e      scroll one line down
+CTRL-r      scroll one line up
+zz          take focused line and put in middle of screen
+
+# UNDO AND REDO
+CTRL-y      redo
+u           undo

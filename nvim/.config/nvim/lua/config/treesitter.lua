@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "python", "bash" },
+	ensure_installed = { "python", "bash", "gomod", "go" },
 	highlight = {
 		enable = true,
 	},
@@ -15,5 +15,18 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = {
 		enable = true,
+	},
+
+	textobjects = {
+		select = {
+			enable = true,
+			-- Automatically jump forward to textobj, similar to targets.vim
+			lookahead = true,
+		},
+	},
+
+	move = {
+		enable = true,
+		set_jumps = true, -- whether to set jumps in the jumplist
 	},
 })
