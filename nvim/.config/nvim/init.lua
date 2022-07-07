@@ -13,6 +13,7 @@ require("config.commentary")
 require("config.treesitter")
 require("config.indent")
 require("config.autopair")
+require("config.comments")
 
 -- LSP Config
 require("lsp.lsp-config")

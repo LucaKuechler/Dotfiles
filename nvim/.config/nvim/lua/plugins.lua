@@ -109,4 +109,10 @@ return require("packer").startup(function()
 
 	-- jump to code symbols
 	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
+
+	-- better commands
+	use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+	})
 end)
