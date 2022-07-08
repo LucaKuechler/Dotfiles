@@ -21,7 +21,7 @@ CTRL k  resize to the top
 
 # INDENTION
 CTRL-i      indent highlighted lines
-CTRL-u      outdent highlighted lines
+CTRL-o      outdent highlighted lines
 
 # BUFFERLINE
 <TAB>       go to next buffer from bufferline
@@ -48,8 +48,8 @@ gi          jump to last insertion line
 # PAGE NAVIGATION
 CTRL-b      move page backward
 CTRL-f      move page forward
-CTRL-d      move 1/2 page forward
-CTRL-s      move 1/2 page backward
+CTRL-d      move 1/2 page down 
+CTRL-u      move 1/2 page up 
 CTRL-e      scroll one line down
 CTRL-r      scroll one line up
 zz          take focused line and put in middle of screen

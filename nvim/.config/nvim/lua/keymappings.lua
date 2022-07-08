@@ -34,7 +34,7 @@ vim.api.nvim_set_keymap("n", "<C-l>", ":vertical:resize -5<CR>", { noremap = tru
 
 -- better indention
 vim.api.nvim_set_keymap("v", "<C-i>", ">gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<C-u>", "<gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-o>", "<gv", { noremap = true, silent = true })
 
 -- formatter
 vim.api.nvim_set_keymap("n", "<leader>f", ":Format<CR>", { noremap = true, silent = true })
@@ -65,8 +65,6 @@ vim.api.nvim_set_keymap("n", "<C-p>", "<C-o>", { silent = true, noremap = true }
 vim.api.nvim_set_keymap("n", "<C-n>", "<C-i>", { silent = true, noremap = true })
 
 -- page navigation
-vim.api.nvim_set_keymap("n", "<C-s>", "<C-d>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<C-d>", "<C-u>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<C-r>", "<C-y>", { silent = true, noremap = true })
 
 -- redo
