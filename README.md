@@ -49,6 +49,20 @@ $ sudo pacman -S stow
 ```
 
 
+### 1.5 INSTALL RIPGREP (rg)
+* Rg is needed for telescope to work properly.
+
+#### Ubuntu: 
+```
+$ sudo apt install ripgrep -y
+```
+
+#### Arch:
+```
+$ sudo pacman -S ripgrep
+```
+
+
 ## 2. TMUX
 * If you don't have a tmux configuration file.
 ```
