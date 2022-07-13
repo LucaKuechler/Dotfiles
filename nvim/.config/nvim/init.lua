@@ -4,6 +4,7 @@ require("settings")
 require("colorscheme")
 
 -- Plugins Config
+require("config.telescope")
 require("config.bufferline")
 require("config.galaxyline")
 require("config.autocompletion")
