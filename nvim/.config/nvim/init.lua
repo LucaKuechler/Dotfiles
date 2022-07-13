@@ -14,6 +14,7 @@ require("config.treesitter")
 require("config.indent")
 require("config.autopair")
 require("config.comments")
+require("config.project")
 
 -- LSP Config
 require("lsp.lsp-config")

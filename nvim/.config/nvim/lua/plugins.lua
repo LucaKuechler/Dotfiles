@@ -115,4 +115,7 @@ return require("packer").startup(function()
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+
+	-- project management
+	use({ "ahmedkhalf/project.nvim" })
 end)
