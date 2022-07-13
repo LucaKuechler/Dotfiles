@@ -94,3 +94,6 @@ vim.api.nvim_set_keymap("n", "<C-q>", ":m -2<CR>", { silent = true, noremap = tr
 vim.api.nvim_set_keymap("n", "<C-a>", ":m +1<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("v", "<C-q>", "dkP`[V`]", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("v", "<C-a>", "dp`[V`]", { silent = true, noremap = true })
+
+-- projects
+vim.api.nvim_set_keymap("n", "<leader>r", ":Telescope projects<CR>", { silent = true, noremap = true })
