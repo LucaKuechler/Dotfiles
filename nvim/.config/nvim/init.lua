@@ -6,7 +6,7 @@ require("colorscheme")
 -- Plugins Config
 require("config.telescope")
 require("config.bufferline")
-require("config.galaxyline")
+require("config.statusline")
 require("config.autocompletion")
 require("config.tabnine")
 require("config.nvimtree")
