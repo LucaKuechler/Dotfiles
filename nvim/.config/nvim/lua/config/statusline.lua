@@ -136,7 +136,7 @@ local diff = {
 		if gitsigns then
 			return {
 				added = gitsigns.added,
-				modified = gitsigns.modified,
+				modified = gitsigns.changed,
 				removed = gitsigns.removed,
 			}
 		end
