@@ -23,6 +23,7 @@ require("lsp.lsp-python")
 require("lsp.lsp-go")
 require("lsp.lsp-docker")
 require("lsp.lsp-lua")
+require("lsp.lsp-php")
 
 -- Linter
 require("linter.test")
