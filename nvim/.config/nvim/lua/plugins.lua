@@ -25,17 +25,17 @@ return require("packer").startup(function()
 		end,
 	})
 
-	use({
-		"NTBBloodbath/galaxyline.nvim",
-
-		-- your statusline
-		config = function()
-			require("galaxyline.themes.eviline")
-		end,
-
-		-- some optional icons
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+	-- use({
+	-- 	"NTBBloodbath/galaxyline.nvim",
+	--
+	-- 	-- your statusline
+	-- 	config = function()
+	-- 		require("galaxyline.themes.eviline")
+	-- 	end,
+	--
+	-- 	-- some optional icons
+	-- 	requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	-- })
 
 	-- buffer line
 	use({ "akinsho/nvim-bufferline.lua", requires = "kyazdani42/nvim-web-devicons" })
@@ -114,5 +114,14 @@ return require("packer").startup(function()
 	use({
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
+	})
+
+	-- project management
+	use({ "ahmedkhalf/project.nvim" })
+
+	-- lua line
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 end)

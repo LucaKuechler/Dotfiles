@@ -4,8 +4,9 @@ require("settings")
 require("colorscheme")
 
 -- Plugins Config
+require("config.telescope")
 require("config.bufferline")
-require("config.galaxyline")
+require("config.statusline")
 require("config.autocompletion")
 require("config.tabnine")
 require("config.nvimtree")
@@ -14,6 +15,7 @@ require("config.treesitter")
 require("config.indent")
 require("config.autopair")
 require("config.comments")
+require("config.project")
 
 -- LSP Config
 require("lsp.lsp-config")
@@ -21,6 +23,7 @@ require("lsp.lsp-python")
 require("lsp.lsp-go")
 require("lsp.lsp-docker")
 require("lsp.lsp-lua")
+require("lsp.lsp-php")
 
 -- Linter
 require("linter.test")

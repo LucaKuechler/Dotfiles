@@ -13,7 +13,6 @@ o.shiftwidth = 4 -- While tab=2 will always complete 1-2 this will complete 1-3
 o.showtabline = 2 -- Always show tabs
 o.conceallevel = 0 -- `` in markdown
 
-
 o.splitbelow = true -- split window default
 o.splitright = true -- split window default
 
@@ -33,3 +32,5 @@ o.writebackup = false -- backup
 o.timeoutlen = 300 -- by default timeoutlen is 1000ms
 
 o.cursorline = true -- activate cursorline
+
+o.laststatus = 3 -- set one global statusline for all splits
