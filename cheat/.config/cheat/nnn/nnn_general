@@ -1,0 +1,41 @@
+###
+    NNN GENERAL SHORTCUTS
+    by luca
+###
+
+# GENERAL
+<Leader> h      remove highligting after search
+<Leader> e      toggle filetree
+
+# MOVE
+j		next item
+k		previous item
+h		go up folder
+l		go down folder
+
+# OPEN FILE
+le		open file in editor
+lo		open file in program x
+
+# CREATE MOVE DELETE
+xc			delete file under cursor
+xs			delete file under selection
+nf			create new file
+nd			create new directory
+<CTRL-r>	rename file under cursor
+<space>p	copy selected item to new place	
+<space>v	move selected item to new place	
+
+# TOGGLE INFORMATIONS
+*		show executable files
+d		show date size and privileges
+.		show hidden files
+
+# TAB MOVEMENT
+1		goto first tab
+2		goto second tab
+3		goto thrid tab
+4		goto fourth tab
+
+# HELP
+? 		show keybindings
