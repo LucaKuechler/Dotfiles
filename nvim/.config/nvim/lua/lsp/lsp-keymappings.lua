@@ -27,6 +27,9 @@ local function keys(client, bufnr)
 
 	-- go to prev diagnostic (hint, warning or error)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+
+	-- open code actions for buffer
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 end
 
 return { keys = keys }

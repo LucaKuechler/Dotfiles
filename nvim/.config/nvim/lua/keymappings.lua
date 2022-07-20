@@ -16,9 +16,8 @@ vim.api.nvim_set_keymap("n", "gtd", ":BufferLinePickClose<CR>", { noremap = true
 vim.api.nvim_set_keymap("n", "<C-w>", ":bd<CR>", { noremap = true, silent = true })
 
 -- toggle telescope
-vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":Telescope find_files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>b", ":Telescope buffers<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>g", ":Telescope live_grep<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":Telescope find_files prompt_prefix=🔍<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>g", ":Telescope live_grep prompt_prefix=🔍<CR>", { noremap = true, silent = true })
 
 -- better window movement
 vim.api.nvim_set_keymap("n", "gh", "<C-w>h", { noremap = true, silent = true })

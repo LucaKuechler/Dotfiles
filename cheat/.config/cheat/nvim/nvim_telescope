@@ -1,0 +1,25 @@
+###
+    NEOVIM TELESCOPE SHORTCUTS
+    by luca
+###
+
+
+# OPEN TELESCOPE
+<leader><leader>    search recursively files from current folder
+<leader>g           grep words in files recursively
+
+# CLOSE TELESCOPE
+<C-c>               close telescope window
+
+# TELESCOPE NORMAL MODE
+    j | file down
+    k | file up
+    k | file up
+
+# TELESCOPE INSERT MODE
+<C-s>       split selection vertical
+<C-h>       split selection horizontal
+<C-t>       open selection in new tab
+
+<C-d>       scroll code preview down
+<C-u>       scroll code preview up
