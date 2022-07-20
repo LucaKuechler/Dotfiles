@@ -14,6 +14,14 @@ sudo pacman -S starship
 sudo pacman -S zoxide
 ```
 
+* Install nnn
+```
+git clone https://github.com/jarun/nnn.git ~/Downloads
+cd ~/Downloads/nnn/
+sudo make O_NERD=1
+sudo mv nnn /usr/bin
+```
+
 * Install nodejs and npm
 ```
 sudo pacman -S nodejs npm
