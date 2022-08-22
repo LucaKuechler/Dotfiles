@@ -24,7 +24,7 @@ fi
 # --------------------------------------------------------------------
 # TMUX
 # --------------------------------------------------------------------
-if command -v nvim &> /dev/null && command -v fzf &> /dev/null
+if command -v tmux &> /dev/null
 then
     alias t='tmux attach || tmux new-session'
     alias ta='tmux attach -t'
