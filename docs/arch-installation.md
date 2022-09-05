@@ -135,3 +135,9 @@ sudo yay -S betterlockscreen
 ```
 sudo pacman -S python-pip
 ```
+
+* Install rofi
+```
+sudo pacman -S rofi
+cd ~/Dotfiles && stow rofi
+```
