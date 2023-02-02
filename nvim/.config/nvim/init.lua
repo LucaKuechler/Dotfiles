@@ -24,6 +24,7 @@ require("lsp.lsp-go")
 require("lsp.lsp-docker")
 require("lsp.lsp-lua")
 require("lsp.lsp-php")
+require("lsp.lsp-terraform")
 
 -- Linter
 require("linter.test")
