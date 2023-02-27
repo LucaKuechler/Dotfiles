@@ -22,7 +22,7 @@ require("formatter").setup({
 		go = {
 			function()
 				return {
-					exe = "gofmt",
+					exe = "gofumpt",
 					stdin = true,
 				}
 			end,
@@ -32,6 +32,33 @@ require("formatter").setup({
 				return {
 					exe = "prettier",
 					args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote" },
+					stdin = true,
+				}
+			end,
+		},
+		html = {
+			function()
+				return {
+					exe = "prettier",
+					args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
+					stdin = true,
+				}
+			end,
+		},
+		css = {
+			function()
+				return {
+					exe = "prettier",
+					args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
+					stdin = true,
+				}
+			end,
+		},
+		markdown = {
+			function()
+				return {
+					exe = "prettier",
+					args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
 					stdin = true,
 				}
 			end,

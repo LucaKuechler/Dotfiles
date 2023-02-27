@@ -47,6 +47,7 @@ return require("packer").startup(function(use)
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
+	use({ "WhoIsSethDaniel/mason-tool-installer.nvim" })
 
 	-- auto completion
 	use("hrsh7th/nvim-cmp")
@@ -87,8 +88,8 @@ return require("packer").startup(function(use)
 
 	-- debuger
 	use("mfussenegger/nvim-dap")
-	use("mfussenegger/nvim-dap-python")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("mfussenegger/nvim-dap-python")
 	use("leoluz/nvim-dap-go")
 
 	-- lsp function signature
