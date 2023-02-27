@@ -25,18 +25,6 @@ return require("packer").startup(function()
 		end,
 	})
 
-	-- use({
-	-- 	"NTBBloodbath/galaxyline.nvim",
-	--
-	-- 	-- your statusline
-	-- 	config = function()
-	-- 		require("galaxyline.themes.eviline")
-	-- 	end,
-	--
-	-- 	-- some optional icons
-	-- 	requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	-- })
-
 	-- buffer line
 	use({ "akinsho/nvim-bufferline.lua", requires = "kyazdani42/nvim-web-devicons" })
 
@@ -70,7 +58,7 @@ return require("packer").startup(function()
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
 	-- color theme
-	use("christianchiarulli/nvcode-color-schemes.vim")
+	use("navarasu/onedark.nvim")
 
 	-- async linter
 	use("mfussenegger/nvim-lint")
@@ -110,7 +98,7 @@ return require("packer").startup(function()
 	-- jump to code symbols
 	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
-	-- better commands
+	-- better comments
 	use({
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
