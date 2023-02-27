@@ -8,7 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	execute("packadd packer.nvim")
 end
 
-return require("packer").startup(function()
+return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use({ "wbthomason/packer.nvim", opt = True })
 
@@ -47,6 +47,7 @@ return require("packer").startup(function()
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
+	use({ "folke/neodev.nvim" })
 
 	-- auto completion
 	use("hrsh7th/nvim-cmp")
