@@ -42,4 +42,7 @@ keys = [
     Key([MOD], "d", lazy.spawn("rofi -show drun")),
     Key([MOD], "w", lazy.spawn("rofi -show window")),
     Key([MOD], "p", lazy.spawn(os.path.expanduser('~/Dotfiles/rofi/.config/rofi/powermenu.sh'))),
+
+    # SCREENSHOT
+    Key([MOD, SHIFT], "s", lazy.spawn("flameshot gui")),
 ]

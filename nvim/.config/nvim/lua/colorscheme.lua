@@ -1,4 +1,9 @@
-vim.cmd('colorscheme onedark')
+require('onedark').setup {
+    style = 'dark',
+	transparent = true
+}
+require('onedark').load()
+
 vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 vim.cmd('highlight LineNr guibg=NONE')
 vim.cmd('highlight CursorLine term=bold cterm=bold guibg=none')
