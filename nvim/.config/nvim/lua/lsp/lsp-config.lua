@@ -6,6 +6,41 @@ require("mason").setup({
 	},
 })
 
-require("mason-lspconfig").setup({
-	ensure_installed = { "gopls", "dockerls", "pyright", "lua_ls" },
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		-- Python
+		"pyright",
+		"pylint",
+		"mypy",
+		"black",
+		"debugpy",
+
+		-- Go
+		"gopls",
+		"delve",
+		"gofumpt",
+		"golangci-lint",
+
+		-- Docker
+		"dockerfile-language-server",
+
+		-- Javascript
+		"prettier",
+
+		-- Markdown
+		"markdownlint",
+
+		-- Lua
+		"lua-language-server",
+		"stylua",
+	},
+
+	-- update whenever possible
+	auto_update = false,
+
+	-- update on startup
+	run_on_start = true,
+
+	-- 3 second delay
+	start_delay = 3000,
 })

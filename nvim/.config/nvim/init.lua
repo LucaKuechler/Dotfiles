@@ -27,10 +27,10 @@ require("lsp.lsp-php")
 require("lsp.lsp-terraform")
 
 -- Linter
-require("linter.test")
+require("linter.linter")
 
 -- Format
-require("formatter.test")
+require("formatter.formatter")
 
 -- Git
 require("git.gitsigns")

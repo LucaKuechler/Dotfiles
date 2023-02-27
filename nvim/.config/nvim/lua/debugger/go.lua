@@ -1,16 +1,14 @@
-local dap = require("dap")
-dap.adapters.go = {
-	type = "executable",
-	command = "node",
-	args = { os.getenv("HOME") .. "/.local/share/nvim/debugger/go/vscode-go/dist/debugAdapter.js" },
-}
-dap.configurations.go = {
-	{
-		type = "go",
-		name = "Debug",
-		request = "launch",
-		showLog = false,
-		program = "${file}",
-		dlvToolPath = os.getenv("HOME") .. "/.local/share/nvim/debugger/go/delve/dlv",  -- Adjust to where delve is installed
+require("dap-go").setup({
+	dap_configurations = {
+		{
+			type = "go",
+			name = "Attach remote",
+			mode = "remote",
+			request = "attach",
+		},
 	},
-}
+	delve = {
+		initialize_timeout_sec = 20,
+		port = "${port}",
+	},
+})
