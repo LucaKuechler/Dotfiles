@@ -1,4 +1,5 @@
 local compare = require("cmp.config.compare")
+
 local lspkind = require("lspkind")
 lspkind.init({
 	symbol_map = {
@@ -30,13 +31,14 @@ lspkind.init({
 	},
 })
 
-require("cmp").setup({
+local cmp = require("cmp")
+cmp.setup({
 	sources = {
 		{ name = "cmp_tabnine" },
 		{ name = "nvim_lsp" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 5 },
-    	{ name = 'nvim_lsp_signature_help' },
+		{ name = "nvim_lsp_signature_help" },
 	},
 
 	formatting = {
@@ -67,7 +69,16 @@ require("cmp").setup({
 		},
 	},
 
+	window = {
+		documentation = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered({
+      		winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:PmenuSel,Search:None",
+    	}),
+	},
+
 	view = {
-		entries = "native",
-	}
+		entries = "custom",
+	},
+
+	mapping = cmp.mapping.preset.insert({}),
 })
