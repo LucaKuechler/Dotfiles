@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 picom --config $HOME/Dotfiles/picom/.config/picom/picom.conf &
-nitrogen --restore &
+betterlockscreen -w $HOME/Dotfiles/wallpaper/hacker.jpg &
 nm-applet &
-betterlockscreen -w $HOME/Dotfiles/wallpaper/hacker.jpg
+feh --bg-scale $HOME/Dotfiles/wallpaper/tree.png

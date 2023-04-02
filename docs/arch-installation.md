@@ -197,3 +197,28 @@ yay fzf #choose 2
 ```
 yay flameshot #choose 1
 ```
+
+* Install pipewire
+```
+sudo pacman -S manjaro-pipewire gst-plugin-pipewire pulseeffects pipewire-jack pipewire-pulse pipewire-alsa pipewire-audio
+```
+
+* Setup brightness
+```
+yay xbacklight
+nvim /etc/X11/xorg.conf
+
+Section "Device"
+    Identifier  "Intel Graphics"
+    Driver      "intel"
+    Option      "Backlight"  "intel_backlight"
+EndSection
+```
+
+* Battery
+```
+yay dunst
+yay cronie
+crontab -e
+*/5 * * * * /home/lck/Dotfiles/scripts/.config/scripts/batterynotify.sh
+```

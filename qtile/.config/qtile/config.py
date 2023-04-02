@@ -69,7 +69,6 @@ screens = [
                     padding=15,
                     linewidth=0,
                 ),
-                #widget.Volume(),
                 widget.CheckUpdates(
                     background="#2C2C2C",
                     foreground="#fae3b0",
@@ -79,6 +78,14 @@ screens = [
                     custom_command='checkupdates 2> /dev/null',
                     no_update_string=' 📥 0  ',
                     display_format=' 📥 {updates}  ',
+                ),
+                widget.Battery(
+                    background="#2C2C2C",
+                    battery="CMB1",
+                    charge_char="⚡",
+                    discharge_char="🔋",
+                    format= '{char} {percent:2.0%}',
+                    fontsize=18,
                 ),
                 widget.Clock(
                     background="#2C2C2C",
