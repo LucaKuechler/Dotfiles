@@ -223,6 +223,13 @@ crontab -e
 */5 * * * * /home/lck/Dotfiles/scripts/.config/scripts/batterynotify.sh
 ```
 
+* Install qtile_extras
+```
+yay qtile extras
+yay dbus-next
+cat ~/.local/share/qtile/qtile.log
+```
+
 * Install xpad
 ```
 yay xpad
