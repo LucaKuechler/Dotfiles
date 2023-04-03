@@ -222,3 +222,8 @@ yay cronie
 crontab -e
 */5 * * * * /home/lck/Dotfiles/scripts/.config/scripts/batterynotify.sh
 ```
+
+* Install xpad
+```
+yay xpad
+```
