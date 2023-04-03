@@ -45,8 +45,5 @@ colors:
 selection:
   save_to_clipboard: true
     
-key_bindings:
-  - { key: V, mods: Control, action: Paste }
-
 shell:
   program: /usr/bin/bash

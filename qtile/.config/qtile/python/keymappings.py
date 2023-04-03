@@ -45,4 +45,7 @@ keys = [
 
     # SCREENSHOT
     Key([MOD, SHIFT], "s", lazy.spawn("flameshot gui")),
+
+    # NOTES
+    Key([MOD, SHIFT], "n", lazy.spawn("xpad -t")),
 ]
