@@ -3,12 +3,15 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 from python.settings import MOD, CONTROL, SHIFT, TERMINAL, SPACE, TAB
 
-
 keys = [
     # GENERAL 
-    Key([MOD], "Return", lazy.spawn(TERMINAL)),
     Key([MOD, CONTROL], "r", lazy.reload_config()),
     Key([MOD, SHIFT], "r", lazy.spawncmd()),
+
+    # PROGRAMS
+    Key([MOD], "Return", lazy.spawn(TERMINAL)),
+    Key([MOD], "f", lazy.spawn("firefox")),
+    Key([MOD], "e", lazy.spawn("thunar")),
 
     # WINDOW MOVEMENT
     Key([MOD, SHIFT], "h", lazy.layout.shuffle_left()),
@@ -48,4 +51,13 @@ keys = [
 
     # NOTES
     Key([MOD, SHIFT], "n", lazy.spawn("xpad -t")),
+
+    # AUDIO
+    Key([], "XF86AudioRaiseVolume", lazy.spawn('sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume @DEFAULT_SINK@ +5% ; notify-send -t 1000 -h string:x-canonical-private-synchronous:volume Volume: $(pactl get-sink-volume @DEFAULT_SINK@ | awk \'{printf $5}\')"')),
+    Key([], "XF86AudioLowerVolume", lazy.spawn('sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume @DEFAULT_SINK@ -5% ; notify-send -t 1000 -h string:x-canonical-private-synchronous:volume Volume: $(pactl get-sink-volume @DEFAULT_SINK@ | awk \'{printf $5}\')"')),
+    Key([], "XF86AudioMute", lazy.spawn('sh -c "pactl set-sink-mute @DEFAULT_SINK@ toggle ; notify-send -t 1000 -h string:x-canonical-private-synchronous:volume $(pactl get-sink-mute @DEFAULT_SINK@)"')),
+
+    # BRIGHTNESS
+    Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight +10")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -10")),
 ]

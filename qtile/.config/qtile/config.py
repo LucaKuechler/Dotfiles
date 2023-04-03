@@ -1,4 +1,5 @@
 import os
+import re
 import datetime
 import subprocess
 from typing import List  # noqa: F401
@@ -11,8 +12,19 @@ from libqtile.utils import guess_terminal
 # CUSTOM
 from python.keymappings import keys
 from python.groups import groups
-#from python.screens import screens
+
+# from python.screens import screens
 from python.layouts import layouts
+
+
+def my_func(text):
+    if text == None:
+        return text
+
+    if len(text) > 20:
+        if "—" in text:
+            return re.sub(r'.*?— ', '', text)
+    return text
 
 mod = "mod4"
 
@@ -25,83 +37,139 @@ for i in groups:
                 lazy.group[i.name].toscreen(),
                 desc="Switch to group {}".format(i.name),
             ),
-            Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-                desc="move focused window to group {}".format(i.name)),
+            Key(
+                [mod, "shift"],
+                i.name,
+                lazy.window.togroup(i.name),
+                desc="move focused window to group {}".format(i.name),
+            ),
         ]
     )
+
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
+
+decor = {
+    "decorations": [
+        RectDecoration(colour="#111111", radius=10, filled=True, padding_y=0)
+    ],
+    "padding": 10,
+    "font": "Hack Nerd Font Mono",
+    "fontsize": 30,
+    "margin_y": 4,
+    "margin_x": 5,
+    "padding_y": 9,
+    "padding_x": 4,
+    "borderwidth": 7,
+    "inactive": "#404040",
+    "active": "#ffffff",
+    "rounded": True,
+    "highlight_color": "#FFEA2E",
+    "highlight_method": "text",
+    "this_current_screen_border": "#FFEA2E",
+    "block_highlight_text_color": "#1e1e2e",
+}
+
+decor2 = {
+    "decorations": [
+        RectDecoration(colour="#111111", radius=10, filled=True, padding_y=0)
+    ],
+    "custom_icon_paths": [os.path.expanduser("~/.config/qtile/icons")],
+    "scale": 0.6,
+}
+
+decor3 = {
+    "decorations": [
+        RectDecoration(colour="#111111", radius=10, filled=True, padding_y=0)
+    ],
+}
+
+decor4 = {
+    "decorations": [
+        RectDecoration(colour="#111111", radius=10, filled=True, padding_y=0)
+    ],
+    "text": " \uf303 ",
+    "fontsize": 30,
+    "foreground": "#ffffff",
+}
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(
-                    font="Hack Nerd Font Mono",
-                    fontsize=30,
-                    #background="#1e1e2e99",
-                    background="#2C2C2C",
-                    margin_y=4,
-                    margin_x=5,
-                    padding_y=9,
-                    padding_x=4,
-                    borderwidth=7,
-                    inactive="#404040",
-                    active="#ffffff",
-                    rounded=True,
-                    highlight_color="#FFEA2E",
-                    highlight_method="text",
-                    this_current_screen_border="#FFEA2E",
-                    block_highlight_text_color="#1e1e2e",
-                ),
+                widget.TextBox(**decor4),
                 widget.Sep(
                     padding=15,
                     linewidth=0,
                 ),
-                widget.CurrentLayoutIcon(
-                    custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
-                    scale=0.6,
-                    background="#2C2C2C",
+                widget.GroupBox(**decor),
+                widget.Sep(
+                    padding=15,
+                    linewidth=0,
+                ),
+                widget.CurrentLayoutIcon(**decor2),
+                widget.Spacer(),
+                widget.WindowName(
+                    **decor3,
+                    format="{name}",
+                    parse_text=my_func,
+                    max_chars = 60,
+                    width = bar.CALCULATED,
                 ),
                 widget.Spacer(),
-                widget.Systray(
-                    icon_size=20,
-                ),
+                widget.Systray(),
                 widget.Sep(
                     padding=15,
                     linewidth=0,
                 ),
-                #widget.Volume(),
                 widget.CheckUpdates(
-                    background="#2C2C2C",
+                    **decor2,
                     foreground="#fae3b0",
                     fontsize=18,
                     update_interval=1800,
-                    distro='Manjaro',
-                    custom_command='checkupdates 2> /dev/null',
-                    no_update_string=' 📥 0  ',
-                    display_format=' 📥 {updates}  ',
+                    distro="Manjaro",
+                    custom_command="checkupdates 2> /dev/null",
+                    no_update_string=" 📥 0  ",
+                    display_format=" 📥 {updates}  ",
                 ),
-                widget.Clock(
-                    background="#2C2C2C",
-                    format=" \u23F0 %H:%M   📅 %d.%m.%Y", #format=" 📅 %d.%m.%Y [Week %W / %A]",
+                widget.Sep(
+                    padding=15,
+                    linewidth=0,
+                ),
+                widget.Battery(
+                    **decor2,
+                    battery="CMB1",
+                    charge_char="⚡",
+                    discharge_char=" 🔋",
+                    format="{char} {percent:2.0%} ",
                     fontsize=18,
+                ),
+                widget.Sep(
+                    padding=15,
+                    linewidth=0,
+                ),
+                widget.PulseVolume(
+                    **decor3,
+                    update_interval=0.05,
+                    fontsize=18,
+                    emoji=True,
                     padding=5,
                 ),
                 widget.Sep(
                     padding=15,
                     linewidth=0,
                 ),
-                widget.TextBox(
-                    text=" \uf303 ",
-                    fontsize=30,
-                    background="#2C2C2CAA",
-                    foreground="#fae3b0",
-                    padding=4,
+                widget.Clock(
+                    **decor2,
+                    format=" 📅 %b %d  %H:%M",  # format=" 📅 %d.%m.%Y [Week %W / %A]",
+                    fontsize=18,
+                    padding=5,
                 ),
             ],
             34,
             background="#00000000",
-            foreground="#1e1e2e",
-            margin=[10,6,8,10],
+            foreground="#111111",
+            margin=[10, 6, 8, 10],
         ),
     ),
 ]
@@ -143,8 +211,15 @@ extension_defaults = widget_defaults.copy()
 
 # Drag floating layouts.
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
+    Drag(
+        [mod],
+        "Button1",
+        lazy.window.set_position_floating(),
+        start=lazy.window.get_position(),
+    ),
+    Drag(
+        [mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()
+    ),
     Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
 
@@ -170,9 +245,13 @@ focus_on_window_activation = "smart"
 reconfigure_screens = True
 auto_minimize = True
 
+
 @hook.subscribe.startup_once
 def autostart():
-    home = os.path.expanduser('~/Dotfiles/qtile/.config/qtile/scripts/autostart.sh') # path to my script, under my user directory
+    home = os.path.expanduser(
+        "~/Dotfiles/qtile/.config/qtile/scripts/autostart.sh"
+    )  # path to my script, under my user directory
     subprocess.call([home])
+
 
 wmname = "LG3D"
