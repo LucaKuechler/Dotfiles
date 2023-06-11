@@ -8,13 +8,6 @@ vim.api.nvim_set_keymap("n", "<Leader>v", ":set hlsearch!<CR>", { noremap = true
 -- nvim lua file tree
 vim.api.nvim_set_keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
--- Bufferline
-vim.api.nvim_set_keymap("n", "<TAB>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-TAB>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "gt", ":BufferLinePick<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "gtd", ":BufferLinePickClose<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-w>", ":bd<CR>", { noremap = true, silent = true })
-
 -- toggle telescope
 vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":Telescope find_files prompt_prefix=🔍<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>g", ":Telescope live_grep prompt_prefix=🔍<CR>", { noremap = true, silent = true })
@@ -75,6 +68,9 @@ vim.api.nvim_set_keymap("n", "<leader>if", ":TSTextobjectSelect @function.inner<
 
 vim.api.nvim_set_keymap("n", "<leader>oc", ":TSTextobjectSelect @class.outer<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>ic", ":TSTextobjectSelect @class.inner<CR>", { silent = true, noremap = true })
+
+vim.api.nvim_set_keymap("n", "<leader>ob", ":TSTextobjectSelect @block.outer<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>ib", ":TSTextobjectSelect @block.inner<CR>", { silent = true, noremap = true })
 
 vim.api.nvim_set_keymap("n", "<leader>nf", ":TSTextobjectGotoNextStart @function.outer<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>pf", ":TSTextobjectGotoPreviousStart @function.outer<CR>", { silent = true, noremap = true })
