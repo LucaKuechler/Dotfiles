@@ -5,7 +5,7 @@ local function keys(client, bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gc", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 
 	-- go to implementation of a class like repositoryImpl
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>li", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 
 	-- go to initialization of a type
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
