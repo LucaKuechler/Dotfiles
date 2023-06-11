@@ -112,6 +112,7 @@ screens = [
                 widget.WindowName(
                     **decor3,
                     format="{name}",
+                    padding=15,
                     parse_text=my_func,
                     max_chars = 60,
                     width = bar.CALCULATED,
