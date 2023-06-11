@@ -25,9 +25,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- buffer line
-	use({ "akinsho/nvim-bufferline.lua", requires = "kyazdani42/nvim-web-devicons" })
-
 	-- telescope
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -112,4 +109,7 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+
+	-- startup time
+	use({ "dstein64/vim-startuptime" })
 end)
