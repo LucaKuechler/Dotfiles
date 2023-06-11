@@ -1,0 +1,49 @@
+###
+    NVIM LSP SHORTCUTS
+    by luca
+###
+
+# GOTO
+gc      goto class
+gd      goto definition
+gi      goto interface
+gD      goto declaration
+<leader>nf      goto next function header
+<leader>pf      goto previous function header
+<leader>nc      goto next class header
+<leader>pc      goto previous class header
+<leader>nb      goto header of next block
+<leader>pb      goto header of previous block
+
+
+# HIGHLIGHT
+<leader>of      highlight function including header
+<leader>if      highlight function excluding header
+<leader>oc      highlight class including header
+<leader>ic      highlight class excluding header
+
+
+# INFORMATION
+K       show informations about symbol under cursor
+gs      show informations when inside func ( here )
+
+
+# DIFFERENCE BETWEEN DECLARATION AND DEFINITION
+declaration     void func(int param);
+definition      void func(int param) {};
+
+
+# DEFINITION VS TYPE_DEFINITION
+```
+type Test struct {
+	test int
+}
+
+func main() {
+    var test Test
+	fmt.Println(test)
+}
+```
+
+defintion           var test Test
+type_definition     type Test struct

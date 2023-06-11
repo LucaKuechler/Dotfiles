@@ -23,13 +23,6 @@ CTRL k  resize to the top
 CTRL-i      indent highlighted lines
 CTRL-o      outdent highlighted lines
 
-# BUFFERLINE
-<TAB>       go to next buffer from bufferline
-<S-TAB>     go to previous buffer from bufferline
-gt [x]      go to buffer by random letter
-gtd [x]     go to buffer and delete it by random letter
-CTRL-w      close the focused buffer
-
 # COMMENTARY
 <Leader>cl      highlight line in normal mode
 <Leader>c       highlight line in visual mode
