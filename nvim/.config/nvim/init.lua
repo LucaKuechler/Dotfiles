@@ -5,7 +5,6 @@ require("colorscheme")
 
 -- Plugins Config
 require("config.telescope")
-require("config.bufferline")
 require("config.statusline")
 require("config.autocompletion")
 require("config.tabnine")
@@ -20,6 +19,7 @@ require("config.project")
 -- LSP Config
 require("lsp.lsp-config")
 require("lsp.lsp-python")
+require("lsp.lsp-cpp")
 require("lsp.lsp-go")
 require("lsp.lsp-docker")
 require("lsp.lsp-lua")
