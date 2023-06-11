@@ -10,7 +10,6 @@ bo.autoindent = true -- indention
 bo.expandtab = true -- convert tabs to spaces
 o.tabstop = 4 -- Insert 4 spaces for tab
 o.shiftwidth = 4 -- While tab=2 will always complete 1-2 this will complete 1-3
-o.showtabline = 2 -- Always show tabs
 o.conceallevel = 0 -- `` in markdown
 o.relativenumber = true --relative line numbers
 
