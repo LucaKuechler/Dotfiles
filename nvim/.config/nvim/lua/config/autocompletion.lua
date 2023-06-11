@@ -72,13 +72,15 @@ cmp.setup({
 	window = {
 		documentation = cmp.config.window.bordered(),
 		completion = cmp.config.window.bordered({
-      		winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:PmenuSel,Search:None",
-    	}),
+			winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:PmenuSel,Search:None",
+		}),
 	},
 
 	view = {
 		entries = "custom",
 	},
 
-	mapping = cmp.mapping.preset.insert({}),
+	mapping = cmp.mapping.preset.insert({
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
+	}),
 })
