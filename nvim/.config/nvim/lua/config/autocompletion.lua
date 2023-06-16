@@ -41,6 +41,12 @@ cmp.setup({
 		{ name = "nvim_lsp_signature_help" },
 	},
 
+	snippet = {
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body)
+      end,
+    },
+
 	formatting = {
 		format = lspkind.cmp_format({
 			mode = "symbol",

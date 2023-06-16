@@ -52,6 +52,9 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("onsails/lspkind-nvim")
+	use("hrsh7th/cmp-vsnip")
+	use("hrsh7th/vim-vsnip")
+
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
 	-- color theme
@@ -112,4 +115,7 @@ return require("packer").startup(function(use)
 
 	-- startup time
 	use({ "dstein64/vim-startuptime" })
+
+	-- go tests
+	use({ "buoto/gotests-vim" })
 end)
