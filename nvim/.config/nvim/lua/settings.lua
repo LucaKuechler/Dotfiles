@@ -2,6 +2,9 @@ local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 wo.wrap = false -- file overall
 wo.number = true -- file overall
 
