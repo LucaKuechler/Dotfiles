@@ -185,12 +185,12 @@ fi
 # --------------------------------------------------------------------
 if command -v docker-compose &> /dev/null || command -v "docker compose" &> /dev/null
 then
-    alias dcud='docker-compose up -d'
-    alias dcudb='docker-compose up -d --build'
+    alias dcupd='docker-compose up -d'
+    alias dcupdb='docker-compose up -d --build'
     alias dcd='docker-compose down'
 else
-    alias dcud='echo "ALIAS ERROR: Please install DOCKER-COMPOSE first!"'
-    alias dcudb='echo "ALIAS ERROR: Please install DOCKER-COMPOSE first!"'
+    alias dcupd='echo "ALIAS ERROR: Please install DOCKER-COMPOSE first!"'
+    alias dcupdb='echo "ALIAS ERROR: Please install DOCKER-COMPOSE first!"'
     alias dcd='echo "ALIAS ERROR: Please install DOCKER-COMPOSE first!"'
 fi
 
@@ -212,3 +212,9 @@ then
     alias nvconf="~/Dotfiles/scripts/.config/scripts/nvconf.sh"
 fi
 
+if command -v fzf &> /dev/null
+then
+	alias open='xdg-open $(find * -type f | fzf) &>/dev/null'
+else
+	alias open='echo "ALIAS ERROR: Please install FZF first!"'
+fi
