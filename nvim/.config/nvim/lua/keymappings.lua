@@ -91,3 +91,10 @@ vim.api.nvim_set_keymap("v", "<C-a>", "dp`[V`]", { silent = true, noremap = true
 
 -- projects
 vim.api.nvim_set_keymap("n", "<leader>r", ":Telescope projects<CR>", { silent = true, noremap = true })
+
+-- auto generate docstrings
+vim.keymap.set('n', '<Leader>ld', '<Plug>(doge-generate)')
+
+-- snippets
+vim.keymap.set('n', '<Tab>', '<Plug>(vsnip-jump-next)')
+vim.keymap.set('n', '<S-Tab>', '<Plug>(vsnip-jump-prev)')
