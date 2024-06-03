@@ -23,8 +23,10 @@ require("lsp.lsp-cpp")
 require("lsp.lsp-go")
 require("lsp.lsp-docker")
 require("lsp.lsp-lua")
+require("lsp.lsp-js")
 require("lsp.lsp-php")
 require("lsp.lsp-terraform")
+require("lsp.lsp-markdown")
 
 -- Linter
 require("linter.linter")

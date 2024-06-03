@@ -1,5 +1,5 @@
 require("lint").linters_by_ft = {
-	python = { "mypy", "pylint" },
+	python = { "mypy" },
 	markdown = { "markdownlint" },
 	go = { "golangcilint" },
 }

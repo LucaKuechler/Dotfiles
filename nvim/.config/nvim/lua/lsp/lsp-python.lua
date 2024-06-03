@@ -13,9 +13,26 @@ require("lspconfig").pyright.setup({
 				useLibraryCodeForTypes = true,
 			},
 		},
+		pyright = {
+			-- Using Ruff's import organizer
+			disableOrganizeImports = true,
+		},
 	},
 
 	flags = {
 		debounce_text_changes = 150,
+	},
+})
+
+require("lspconfig").ruff_lsp.setup({
+	on_attach = function(client, bufnr)
+		keymappings.keys(client, bufnr)
+	end,
+
+	init_options = {
+		settings = {
+			-- Any extra CLI arguments for `ruff` go here.
+			args = {},
+		},
 	},
 })

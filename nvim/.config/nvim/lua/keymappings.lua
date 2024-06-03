@@ -35,10 +35,9 @@ vim.api.nvim_set_keymap("n", "<leader>f", ":Format<CR>", { noremap = true, silen
 vim.api.nvim_set_keymap("n", "<leader>a", ':lua require("lint").try_lint()<CR>', { noremap = true, silent = true })
 
 -- trouble
-vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>Trouble document_diagnostics<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>xt", "<cmd>TodoTrouble<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>Trouble workspace_diagnostics<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>TodoTrouble<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true, noremap = true })
 
 -- git
@@ -92,3 +91,10 @@ vim.api.nvim_set_keymap("v", "<C-a>", "dp`[V`]", { silent = true, noremap = true
 
 -- projects
 vim.api.nvim_set_keymap("n", "<leader>r", ":Telescope projects<CR>", { silent = true, noremap = true })
+
+-- auto generate docstrings
+vim.keymap.set('n', '<Leader>ld', '<Plug>(doge-generate)')
+
+-- snippets
+vim.keymap.set('n', '<Tab>', '<Plug>(vsnip-jump-next)')
+vim.keymap.set('n', '<S-Tab>', '<Plug>(vsnip-jump-prev)')
