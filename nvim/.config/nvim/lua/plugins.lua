@@ -118,6 +118,9 @@ return require("lazy").setup({
 		dependencies = "nvim-lua/plenary.nvim",
 	},
 
+	-- docstring generator
+	"kkoomen/vim-doge",
+
 	-- project management
 	"ahmedkhalf/project.nvim",
 
